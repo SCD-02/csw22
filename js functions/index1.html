@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            border: 2px solid black;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">container
+        <div class="gp">div
+            <ul class="p">ul
+                <li>li
+                    <span class="s1">child</span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="container1">container1
+        <div class="gp1">div1
+            <ul class="p1">ul1
+                <li>li1
+                    <span class="s2">child</span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="container1">container2
+        <div class="gp1">div2
+            <ul class="p1">ul2
+                <li>li2
+                    <span class="s3">child</span></li>
+            </ul>
+        </div>
+    </div>
+    <script src="jquery-3.6.1.js"></script>
+    <script>
+        $('.s1').parent().css({"color":"red" , "border":"2px solid blue"})
+        $('.s2').parents().css({"color":"green","border":"2px solid pink"})
+        $('.s3').parentsUntil(".gp1").css({"color":"blue","border":"2px solid red"})
+    </script>
+</body>
+</html>
